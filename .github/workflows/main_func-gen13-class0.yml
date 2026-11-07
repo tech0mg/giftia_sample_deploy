@@ -55,7 +55,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -67,11 +66,6 @@ jobs:
         with:
           name: python-app
           path: release.zip
-
-      - name: Unzip artifact for deployment
-        run: |
-          unzip release.zip
-          rm release.zip
         
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
