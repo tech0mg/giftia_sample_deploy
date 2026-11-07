@@ -8,6 +8,9 @@ on:
   push:
     branches:
       - 'main'
+    paths:
+      - 'backend/**'
+      - '.github/workflows/main_func-gen13-class0.yml'
   workflow_dispatch:
 
 env:
@@ -19,6 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read #This is required for actions/checkout
+    defaults:
+      run:
+        working-directory: backend
 
     steps:
       - name: Checkout repository
@@ -74,4 +80,5 @@ jobs:
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D2532E8B22DB432EA37B38547D4865CA }}
           sku: 'flexconsumption'
+          remote-build: ture
         
