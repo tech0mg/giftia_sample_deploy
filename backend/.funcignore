@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+*.db
+tests/
+tools/
+requirements-dev.txt
+local.settings.json

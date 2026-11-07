@@ -16,3 +16,6 @@ node_modules/
 out/
 next-env.d.ts
 *.tsbuildinfo
+
+# Azure Functions のローカル設定（秘密の値が入る）
+local.settings.json

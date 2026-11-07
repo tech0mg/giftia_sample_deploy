@@ -4,3 +4,4 @@ python-dotenv>=1.0
 pymysql>=1.1
 openai>=1.40      # LLMで推薦理由を作るとき（任意）。使わなければ入れなくても動く
 gunicorn>=22      # Azure App Service で動かすとき（5周目。uvicorn のワーカーを束ねる）
+azure-functions>=1.20  # Functions（フレックス従量課金）で動かすとき。function_app.py が使う
